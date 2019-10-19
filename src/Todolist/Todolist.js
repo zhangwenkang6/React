@@ -17,10 +17,19 @@ export default class Todolist extends Component {
         var storage = window.localStorage;
         super();
         // this.open(); //重置
-        this.state = {
-            todo:storage.todo.split(","),
-            over:storage.over.split(','),
-        };
+        if(!storage.todo && !storage.over){
+            this.open();
+            this.state = {
+                todo:storage.todo.split(","),
+                over:storage.over.split(','),
+            };
+        }
+        if(storage.todo&& storage.over){
+            this.state = {
+                todo:storage.todo.split(","),
+                over:storage.over.split(','),
+            };
+        }  
     }
     addItem = (msg)=>{
         var storage = window.localStorage;
