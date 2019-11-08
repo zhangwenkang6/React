@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import '../index.css';
 
 export default class About extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            history: require("history").createHashHistory,
+        }
+    }
+    goback = () => {
+        this.state.history().goBack();
+    }
     render() {
         return (
             <div>
                 <div id = 'login-left'>
                     <div id= 'login-left-top'>
-                        <a href='/home' id = 'login-left-top-home'>主页</a>
+                        <a onClick={this.goback} id = 'login-left-top-home'>主页</a>
                         <p>/ </p>
-                        <a href='/login' id = 'login-left-top-login'> 登录</a>
+                        <a id = 'login-left-top-login'> 登录</a>
                     </div>
                     <form id = 'login-center'>
                         <div>
@@ -25,7 +34,7 @@ export default class About extends Component {
                             </div>
                         </div>
                         <div>
-                            <a href='./home'><div className='login-center-button'>登录</div></a>
+                            <a onClick={this.goback}><div className='login-center-button'>登录</div></a>
                             <a>忘记密码了?</a>
                         </div>
                     </form>

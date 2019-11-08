@@ -11,7 +11,7 @@ export default class Topic extends Component {
     
     componentDidMount(){
         var a=this.props.location.pathname;
-        console.log(a);
+        console.log(this.props.history.goBack);
         var b = a.split('/');
         var c = b[b.length-1];
         console.log(c);
