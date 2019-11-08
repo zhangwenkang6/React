@@ -46,7 +46,7 @@ export default class Good extends Component {
                                 <span class="all-reply">{item.reply_count}/</span>
                                 <span class="all-visit">{item.visit_count}</span>
                             </div>
-                            <sapn class="all-share">分享</sapn>                               
+                            <sapn class="all-share">精华</sapn>                               
                             <Link to={'/topics/'+item.id}>{item.title}</Link>
                             <span class="all-time">1天前</span>
                             <div className='all-img1'></div>

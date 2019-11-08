@@ -47,7 +47,7 @@ export default class All extends Component {
                                 <span class="all-visit">{item.visit_count}</span>
                             </div>
                             <sapn class="all-share">分享</sapn>                               
-                            <Link to={'/topic/'+item.id}>{item.title}</Link>
+                            <Link to={'/topics/'+item.id}>{item.title}</Link>
                             <span class="all-time">1天前</span>
                             <div className='all-img1'></div>
                         </div>

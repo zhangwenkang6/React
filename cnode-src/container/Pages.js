@@ -6,7 +6,7 @@ export default class Pages extends Component {
             <div className='all-pages'>
                 {
                     [1,2,3,4,5,6,7,8,9,10].map((idx)=>(
-                        <button key={idx} onClick={()=>this.props.getPages(idx)} class="page2">{idx}</button>
+                        <button key={idx} onClick={()=>this.props.getPages(idx)}>{idx}</button>
                     ))
                 }
             </div>

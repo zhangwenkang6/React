@@ -7,7 +7,8 @@ import About from './container/About';
 import Start from './container/Start';
 import Login from './container/Login';
 import LoginRight from './container/LoginRight';
-import Right from './container/Right'
+import Right from './container/Right';
+import Topic from './container/Topic';
 
 export default class App extends Component{
   render(){
@@ -22,6 +23,7 @@ export default class App extends Component{
               <Route path='/start' component={Start}/>
               <Route path='/about' component={About}/>
               <Route path='/login' component={Login}/>
+              <Route path='/topics' component={Topic} />
             </div>
             <div className = 'sider'>
               <Route path='/login' component={LoginRight}/>
@@ -29,6 +31,7 @@ export default class App extends Component{
               <Route path='/api' component={Right} />
               <Route path='/start' component={Right} />
               <Route path='/about' component={Right} />
+              <Route path='/topics' component={Right} />
             </div>
             <div id="footer">
               <div>
